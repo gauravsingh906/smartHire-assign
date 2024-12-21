@@ -87,15 +87,15 @@ const Sidebar = () => {
 
             {/* Filters */}
             <div className="flex items-center justify-between  mb-4">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
                     <Users className="w-5  text-gray-900" />
-                    <span className="text-md font-semibold">All</span>
-                    <span className="text-md bg-indigo-200 text-indigo-600 px-2 py-1 rounded-full font-semibold">232</span>
-                    <ChevronDown className='w-5 text-gray-500'></ChevronDown>
+                    <span className="text-sm font-semibold">All</span>
+                    <span className="text-sm bg-indigo-200 text-indigo-600 px-2 py-1 rounded-full font-semibold">232</span>
+                    <ChevronDown className='w-5 ml-1 text-gray-500'></ChevronDown>
                 </div>
-                <div className="flex items-center gap-4 text-gray-500">
+                <div className="flex items-center gap-2 text-gray-500">
                     <Filter className="w-4 text-gray-600" />
-                    <span className="text-md text-black font-semibold">Oldest</span>
+                    <span className="text-sm text-black font-semibold">Oldest</span>
                     <ChevronDown className='w-4 text-gray-500'></ChevronDown>
                 </div>
             </div>
@@ -110,7 +110,7 @@ const Sidebar = () => {
                                     <div className='bg-[#bae6fd] p-1 rounded-full'>
                                         <Image
                                             src="/profile.png"     // Replace with your image path
-                                            alt={message.user}     // Dynamic alt text based on message.user
+                                            // alt={message.user}     // Dynamic alt text based on message.user
                                             width={32}             // Convert "w-8" to pixel value (8 * 4 = 32px)
                                             height={32}            // Convert "h-8" to pixel value (8 * 4 = 32px)
                                             className="rounded-full"
@@ -131,11 +131,13 @@ const Sidebar = () => {
                                     <div className="flex items-center space-x-2">
                                         <span className="font-medium text-md">{message.user}</span>
                                         {message.platform === 'messenger' &&
-                                            <img
-                                                src={message.user === 'admin' ? 'admin.png' : 'user.png'}
-                                                alt={message.user}
-                                                className="w-5 h-5 rounded-full"
-                                            />
+                                            <Image
+                                            src="/messager.png"     // Path to the WhatsApp icon
+                                            alt={message.user}      // Dynamic alt text based on message.user
+                                            width={24}              // Convert "w-6" to pixel value (6 * 4 = 24px)
+                                            height={24}             // Convert "h-6" to pixel value (6 * 4 = 24px)
+                                            className="rounded-full"
+                                        />
 
                                         }
                                         {message.platform === 'message' &&

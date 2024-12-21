@@ -36,12 +36,12 @@ const UserInfoPanel = () => {
       {/* Profile Header */}
       <div className="text-center mb-6">
         <div className="relative inline-block">
-          <div className="w-20 p-2 h-20 bg-[#bae6fd] rounded-full mb-2">
+          <div className="w-20 p-1 h-20 bg-[#bae6fd] rounded-full mb-2">
           <Image
   src="/profile.png" // Replace with your image path
   alt="Profile"       // Provide an appropriate alt text
-  width={32}          // Specify width
-  height={32}         // Specify height
+  width={90}          // Specify width
+  height={90}         // Specify height
   className="rounded-full"
 />
           </div>
