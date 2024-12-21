@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className='flex flex-col p-2 min-h-screen justify-center content-center'>
       <Header></Header>
-    <div className="flex m-auto p-2 m-2 border rounded-lg ">
+    <div className="flex m-auto p-2 m-2 border  rounded-lg ">
       <Sidebar />
       <Chat />
       <UserInfoPanel />

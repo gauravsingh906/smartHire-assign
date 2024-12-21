@@ -1,30 +1,38 @@
-'use client'
-import React from 'react';
-import { MessageCircle,  Sparkles,EllipsisVertical, ChevronDown,Image, Send, MoreVertical, Info, ShoppingBasketIcon, ShoppingCart, Contact } from 'lucide-react';
 
+import React from 'react';
+import { MessageCircle,  Sparkles,EllipsisVertical, ChevronDown, Send, MoreVertical, Info, ShoppingBasketIcon, ShoppingCart, Contact, ImageIcon } from 'lucide-react';
+import Image from 'next/image';
 const ChatFull = () => {
   return (
     <div className="w-[52%] mb-2 justify-evenly p-2 bg-white  ">
       {/* Header */}
       <div className="p-2 flex h-[8%] items-center justify-between ">
         <div className="flex w-11 p-2  bg-[#bfdbfe] h-12 rounded-full  items-center gap-3">
-          <img 
-            src="/profile.png"
-            alt="Profile" 
-            className="w-8 rounded-full"
-          />
+        <Image 
+  src="/profile.png"
+  alt="Profile"
+  width={32}
+  height={32}
+  className="w-8 rounded-full"
+  priority
+/>
+          
           <div>
             <h2 className="font-semibold text-md">Oğuz Yağız Kara</h2>
             <p className="text-sm text-gray-500 text-sm">oguz@bluereceipt.com</p>
           </div>
         </div>
      
- <div className='flex justify-end  gap-4'>       <div className="flex border items-center  p-2 rounded-lg gap-3">
-          <img 
-            src="messager.png" 
-            className="w-6 h-6"
-            alt="Messenger"
-          />
+ <div className='flex justify-end  gap-4'>     
+    <div className="flex border items-center  p-2 rounded-lg gap-3">
+    <Image 
+  src="/messager.png"
+  alt="Messenger"
+  width={24}
+  height={24}
+  className="w-6 h-6"
+/>
+          
           <span className=" font-semibold text-md">Messenger</span>
           <ChevronDown className="w-4 h-4 ml-2 text-gray-600" />
         </div>
@@ -32,14 +40,26 @@ const ChatFull = () => {
         <div className="flex gap-5">
 
           <div className="flex items-center ">
-            <img src="tick.png" alt="Messenger" className="w-3 h-3" />
+          <Image 
+  src="/tick.png"
+  alt="Tick"
+  width={12}
+  height={12}
+  className="w-3 h-3"
+/>
           
           </div>
           <button>
          <EllipsisVertical  className="w-5 h-5 text-gray-600" />
           </button>
           <div className="flex items-center justify-center p-2 rounded-full bg-[#bfdbfe] ">
-            <img src="profile.png" alt="Messenger" className="w-6 h-6" />
+          <Image 
+  src="/profile.png"
+  alt="Profile"
+  width={24}
+  height={24}
+  className="w-6 h-6 rounded-full"
+/>
             
           </div>
          
@@ -62,11 +82,14 @@ const ChatFull = () => {
         <div className="flex relative w-full  flex-col ">
           <div className="bg-white rounded-lg  p-3 shadow-sm ">
             <div className="flex items-center  gap-2 mb-2">
-             <div className='p-2 bg-[#bfdbfe] rounded-full'> <img 
-                src="profile.png"
-                alt="Profile" 
-                className="w-7 h-7 rounded-full"
-              />
+             <div className='p-2 bg-[#bfdbfe] rounded-full'> <Image 
+  src="/profile.png"
+  alt="Profile"
+  width={28}
+  height={28}
+  className="w-7 h-7 rounded-full"
+/>
+
               </div>
               <div>
                 <div className="font-semibold text-sm">Oğuz Yağız Kara</div>
@@ -85,7 +108,7 @@ const ChatFull = () => {
     <div className="absolute w-4 h-4 bg-gradient-to-tr from-blue-400 to-green-400 rounded-full top-5 right-6"></div>
     <div className="absolute w-5 h-5 bg-gradient-to-tr from-red-400 to-purple-500 rounded-full top-6 right-8"></div>
     <div className="absolute w-3 h-3 bg-gradient-to-tr from-yellow-400 to-orange-400 rounded-full top-9 right-2"></div>
-    <div className="absolute w-4 h-4 bg-gradient-to-tr from-yellow-400 to-indigo-400 rounded top-4 right-16"></div>
+    <div className="absolute w-4 h-4 bg-gradient-to-tr from-yellow-400 to-indigo-400 rounded top-7 right-16"></div>
    
   </div>
          
@@ -93,35 +116,41 @@ const ChatFull = () => {
         <div className="text-md  flex justify-center "><span className='px-3 py-1 bg-white self-center rounded font-semibold'>Today</span></div>
         {/* User Message */}
         <div className="flex  items-start p-2 gap-2">
-        <div className='p-2 bg-[#bfdbfe] rounded-full'> <img 
-                src="profile.png"
-                alt="Profile" 
-                className="w-6 h-6 rounded-full"
-              />
+        <div className='p-2 bg-[#bfdbfe] rounded-full'><Image 
+  src="/profile.png"
+  alt="Profile"
+  width={24}
+  height={24}
+  className="w-6 h-6 rounded-full"
+/>
+
               </div>
           <div className="space-y-1 w-[71%]">
             <div className="bg-white rounded-lg p-3 shadow-sm">
               <div
-              className='flex justify-between'><p className="text-md mb-4">
+              className='flex justify-between'><p className="text-sm mb-4">
                 I keep getting "error while creating a new pop up" for the first time setup, so I'm not able to create a pop up. My shop name is PinkSweetHeart
               </p>
-              <div className=' w-18 h-18 p-1   rounded-full'> <img 
-                src="messager.png" 
-                alt="Profile" 
-                className="w-14  "
-              />
+              <div className=' w-18 h-18 p-1   rounded-full'> <Image 
+  src="/messager.png"
+  alt="Messenger"
+  width={56}
+  height={56}
+  className="w-14"
+/>
               </div></div>
                    {/* Smart Response */}
-        <div className="flex  justify-start ">
+        <div className="flex w-full justify-start ">
           <div className="bg-gray-100 rounded-lg p-2 flex items-center gap-2 text-sm">
             <div className="flex items-center mr-4 gap-1">
               <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
                 <MessageCircle className="w-3 h-3 text-white" />
               </div>
               <span className="font-medium ml-2 text-md font-semibold">Smart Response Detected!</span>
+              <div className='ml-1 flex gap-2'> <button className="text-gray-600 border bg-white text-md font-semibold px-4 py-1 rounded">Cancel</button>
+              <button className="bg-blue-600 text-white text-md font-semibold px-4 py-1 rounded">Select</button></div>
             </div>
-            <button className="text-gray-600 border bg-white text-md font-semibold px-4 py-1 rounded">Cancel</button>
-            <button className="bg-blue-600 text-white text-md font-semibold px-4 py-1 rounded">Select</button>
+           
           </div>
         </div>
             </div>
@@ -132,10 +161,10 @@ const ChatFull = () => {
    
 
         {/* Template Message */}
-        <div className="flex  justify-end ">
+        <div className="flex justify-end ">
         <div className="space-y-1 w-[70%]">
-          <div className="bg-blue-600  text-white rounded-lg p-3 max-w-md">
-            <p className="text-md">
+          <div className="bg-blue-600  text-white rounded-lg p-3">
+            <p className="text-sm">
               Hey, <span className='border-b bg-blue-800'>#firstname</span> I saw you were curious about our products. My name is X from StoreName, feel free to save my number and send me a text if you have any questions or concerns. If you're ready to
             </p>
            
@@ -149,17 +178,17 @@ const ChatFull = () => {
         </div>
 
         {/* Purchase Notification */}
-        <div className="flex  w-[96%] m-auto items-center gap-2 bg-white rounded-lg p-2">
+        <div className="flex  w-[95%] m-auto items-center gap-2 bg-white rounded-lg p-2">
           <div className="w-6 h-6  rounded-full flex items-center justify-center text-white">
           <ShoppingCart className="text-[#272dce] w-5 h-5" />
           </div>
           <div className="flex-1 text-sm">
-            <span className="text-[#2dd4bf] bg-[#ccfbf1]  p-1 m-1 rounded-full">@Ekrem Kenter</span>
-            <span className=" font-medium">Product purchased!</span>
-            <span className=" bg-black text-white p-1 m-1 rounded-lg">$99</span>
-            <span className="font-medium">SNOW® TEETH WHITENING KIT</span>
+            <span className="text-[#2dd4bf] bg-[#ccfbf1] text-sm p-1 m-1 rounded-full">@Ekrem Kenter</span>
+            <span className=" font-medium text-sm">Product purchased!</span>
+            <span className=" bg-black text-sm text-white p-1 m-1 rounded-lg">$99</span>
+            <span className="font-medium text-sm">SNOW® TEETH WHITENING KIT</span>
           </div>
-          <span className="text-sm text-gray-500">2m ago</span>
+          <span className="text-xs text-gray-500">2m ago</span>
         </div>
       </div>
 
@@ -181,12 +210,7 @@ const ChatFull = () => {
               <Contact className="w-5 h-5 text-black font-extrabold" />
             </button>
             <button className="p-2 hover:bg-gray-100 rounded-full">
-              <Image 
-                src="/image-icon.png" 
-                alt="Upload Image" 
-                width={20} 
-                height={20} 
-              />
+             <ImageIcon className='w-5 h-5 text-black font-extrabold'/>
             </button>
           </div>
           <div className="flex gap-2">

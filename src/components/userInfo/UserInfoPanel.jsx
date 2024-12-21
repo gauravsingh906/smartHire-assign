@@ -1,4 +1,4 @@
-'use client'
+
 import React, { useState } from 'react';
 import {
   Phone,
@@ -215,11 +215,11 @@ const UserInfoPanel = () => {
         </div>
 
         {isTagsExpanded && (
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap  gap-2">
             {tags.map((tag) => (
               <div
                 key={tag.id}
-                className="flex items-center text-black bg-gray-200 rounded-lg px-3 py-1 font-semibold text-sm"
+                className="flex items-center justify-between text-black bg-gray-200 rounded-lg px-3 py-1 font-semibold text-sm"
               >
                 {tag.name}
                 <button className="ml-1">

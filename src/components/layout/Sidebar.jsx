@@ -1,9 +1,9 @@
-'use client'
+
 import React from 'react';
 import { ChevronLeft, Search, Plus, Users, Filter, MessageCircleCodeIcon, ArrowLeft, ChevronDown, Dot, Disc, Disc2 } from 'lucide-react';
 import Image from 'next/image';
 
-/*************  ✨ Codeium Command 🌟  *************/
+
 const Sidebar = () => {
     const messages = [
         {
@@ -103,7 +103,7 @@ const Sidebar = () => {
             {/* Message List */}
             <div className="space-y-1">
                 {messages.map((message) => (
-                    <div key={message.id} className="p-3 border-b-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+                    <div key={message.id} className="p-2 border-b-2 hover:bg-gray-50 rounded-lg cursor-pointer">
                         <div className="flex items-start space-x-3 ">
                             {message.avatar ? (
                                 message.avatar.startsWith('/api') ? (
@@ -201,6 +201,6 @@ const Sidebar = () => {
 
     );
 };
-/******  f983bb5d-0905-46f6-a3af-e26f33b8b1ab  *******/
+
 
 export default Sidebar;
