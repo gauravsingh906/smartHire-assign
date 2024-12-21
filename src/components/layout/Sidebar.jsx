@@ -110,7 +110,7 @@ const Sidebar = () => {
                                     <div className='bg-[#bae6fd] p-1 rounded-full'>
                                         <Image
                                             src="/profile.png"     // Replace with your image path
-                                            // alt={message.user}     // Dynamic alt text based on message.user
+                                            alt={message.user}     // Dynamic alt text based on message.user
                                             width={32}             // Convert "w-8" to pixel value (8 * 4 = 32px)
                                             height={32}            // Convert "h-8" to pixel value (8 * 4 = 32px)
                                             className="rounded-full"
@@ -134,8 +134,8 @@ const Sidebar = () => {
                                             <Image
                                             src="/messager.png"     // Path to the WhatsApp icon
                                             alt={message.user}      // Dynamic alt text based on message.user
-                                            width={24}              // Convert "w-6" to pixel value (6 * 4 = 24px)
-                                            height={24}             // Convert "h-6" to pixel value (6 * 4 = 24px)
+                                            width={32}              // Convert "w-6" to pixel value (6 * 4 = 24px)
+                                            height={32}             // Convert "h-6" to pixel value (6 * 4 = 24px)
                                             className="rounded-full"
                                         />
 
@@ -147,8 +147,8 @@ const Sidebar = () => {
                                             <Image
                                                 src="/whatsapp.png"     // Path to the WhatsApp icon
                                                 alt={message.user}      // Dynamic alt text based on message.user
-                                                width={24}              // Convert "w-6" to pixel value (6 * 4 = 24px)
-                                                height={24}             // Convert "h-6" to pixel value (6 * 4 = 24px)
+                                                width={32}              // Convert "w-6" to pixel value (6 * 4 = 24px)
+                                                height={32}             // Convert "h-6" to pixel value (6 * 4 = 24px)
                                                 className="rounded-full"
                                             />}
                                         {message.platform === 'instagram' &&
