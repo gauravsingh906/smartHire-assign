@@ -1,10 +1,10 @@
 "use client"
 
-import Sidebar from '@/components/Layout/Sidebar'
+import Sidebar from '@/components/layout/Sidebar.jsx'
 
-import Chat from '@/components/chat/ChatFull'
-import UserInfoPanel from '@/components/UserInfo/UserInfoPanel'
-import Header from '@/components/layout/Header'
+import Chat from '@/components/chat/ChatFull.jsx'
+import UserInfoPanel from '@/components/userInfo/UserInfoPanel.jsx'
+import Header from '@/components/layout/Header.jsx'
 
 
 export default function Home() {
