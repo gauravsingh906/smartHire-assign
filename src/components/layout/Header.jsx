@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { ChevronLeft, ChevronRight, RotateCw, Grid, Link2, Plus, ArrowLeft, ArrowRight, File, Download } from 'lucide-react';
 import { BsTerminalSplit } from "react-icons/bs";

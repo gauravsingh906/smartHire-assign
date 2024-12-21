@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { MessageCircle,  Sparkles,EllipsisVertical, ChevronDown,Image, Send, MoreVertical, Info, ShoppingBasketIcon, ShoppingCart, Contact } from 'lucide-react';
 
@@ -85,7 +86,7 @@ const ChatFull = () => {
     <div className="absolute w-5 h-5 bg-gradient-to-tr from-red-400 to-purple-500 rounded-full top-6 right-8"></div>
     <div className="absolute w-3 h-3 bg-gradient-to-tr from-yellow-400 to-orange-400 rounded-full top-9 right-2"></div>
     <div className="absolute w-4 h-4 bg-gradient-to-tr from-yellow-400 to-indigo-400 rounded top-4 right-16"></div>
-    <div className="absolute w-6 h-3 bg-gradient-to-tr from-red-400 to-green-400 rounded-[.5rem] top-10 right-16"></div>
+   
   </div>
          
         </div>
@@ -119,7 +120,7 @@ const ChatFull = () => {
               </div>
               <span className="font-medium ml-2 text-md font-semibold">Smart Response Detected!</span>
             </div>
-            <button className="text-gray-600 border text-md font-semibold px-4 py-1 rounded">Cancel</button>
+            <button className="text-gray-600 border bg-white text-md font-semibold px-4 py-1 rounded">Cancel</button>
             <button className="bg-blue-600 text-white text-md font-semibold px-4 py-1 rounded">Select</button>
           </div>
         </div>
@@ -163,33 +164,38 @@ const ChatFull = () => {
       </div>
 
       {/* Input Area */}
-      <div className=" border  h-[11%] p-1 rounded-lg gap-5">
-      <div className='mb-[1.5]'>
-        <input
-          type="text"
-          placeholder="Message Oğuz Yağız"
-          className="w-full  rounded-lg p-2"
+      <div className="border h-[11%] p-1 rounded-lg gap-5">
+        <div className='mb-[1.5]'>
+          <input
+            type="text"
+            placeholder="Message Oğuz Yağız"
+            className="w-full rounded-lg p-2"
           />
-      </div>
+        </div>
         <div className="flex justify-between">
           <div className="flex gap-2">
             <button className="p-2 hover:bg-gray-100 rounded-full">
               <MessageCircle className="w-5 h-5 text-black font-extrabold" />
             </button>
             <button className="p-2 hover:bg-gray-100 rounded-full">
-              <Contact className=" w-5 h-5 text-black font-extrabold" />
+              <Contact className="w-5 h-5 text-black font-extrabold" />
             </button>
             <button className="p-2 hover:bg-gray-100 rounded-full">
-              <Image className="w-5 h-5 text-black font-extrabold" />
+              <Image 
+                src="/image-icon.png" 
+                alt="Upload Image" 
+                width={20} 
+                height={20} 
+              />
             </button>
           </div>
           <div className="flex gap-2">
-          <button className="p-2 hover:bg-gray-100 rounded-full">
-            <Send className="w-5 h-5 font-extrabold" />
-          </button>
-          <button className="p-2  hover:bg-gray-100 border-l border-gray-400">
-            <ChevronDown className="w-5 h-5 font-extrabold" />
-          </button>
+            <button className="p-2 hover:bg-gray-100 rounded-full">
+              <Send className="w-5 h-5 font-extrabold" />
+            </button>
+            <button className="p-2 hover:bg-gray-100 border-l border-gray-400">
+              <ChevronDown className="w-5 h-5 font-extrabold" />
+            </button>
           </div>
         </div>
       </div>

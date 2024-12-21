@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react';
 import {
   Phone,
@@ -16,6 +17,7 @@ import {
   Dot,
 } from 'lucide-react';
 import { RiMoneyDollarCircleFill } from 'react-icons/ri';
+import Image from 'next/image';
 
 const UserInfoPanel = () => {
   const [isInformationExpanded, setIsInformationExpanded] = useState(true);
@@ -35,18 +37,20 @@ const UserInfoPanel = () => {
       <div className="text-center mb-6">
         <div className="relative inline-block">
           <div className="w-20 p-2 h-20 bg-[#bae6fd] rounded-full mb-2">
-            <img
-              src="/profile.png"
-              alt="Profile"
-              className="rounded-full"
-            />
+          <Image
+  src="/profile.png" // Replace with your image path
+  alt="Profile"       // Provide an appropriate alt text
+  width={32}          // Specify width
+  height={32}         // Specify height
+  className="rounded-full"
+/>
           </div>
           <div className="absolute bottom-1 h-6 right-0 w-6 bg-blue-600 rounded-full flex items-center justify-center">
             <Dot className="text-white" />
           </div>
         </div>
-        <h2 className="font-semibold text-xl mb-1">Oğuz Yağız Kara</h2>
-        <p className="text-lg text-gray-500">11:59pm in Ankara, Turkey</p>
+        <h2 className="font-semibold text-l mb-1">Oğuz Yağız Kara</h2>
+        <p className="text-sm text-gray-500">11:59pm in Ankara, Turkey</p>
       </div>
 
       {/* Action Buttons */}

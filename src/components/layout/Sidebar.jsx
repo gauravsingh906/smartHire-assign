@@ -1,6 +1,9 @@
+'use client'
 import React from 'react';
 import { ChevronLeft, Search, Plus, Users, Filter, MessageCircleCodeIcon, ArrowLeft, ChevronDown, Dot, Disc, Disc2 } from 'lucide-react';
-import { FaCircle } from "react-icons/fa";
+import Image from 'next/image';
+
+/*************  ✨ Codeium Command 🌟  *************/
 const Sidebar = () => {
     const messages = [
         {
@@ -10,7 +13,7 @@ const Sidebar = () => {
             message: "I keep getting \"error while creating a new pop up\" for the first time setu...",
             time: "5m",
             platform: "message",
-            online:true,
+            online: true,
             isSend: false,
             isRead: false
         },
@@ -20,7 +23,7 @@ const Sidebar = () => {
             avatar: "/api/placeholder/32/32",
             message: "Wow, this is really epic man! Thank...",
             time: "1h 54m",
-            online:false,
+            online: false,
             platform: "messenger",
             isSend: true,
             isRead: false
@@ -32,7 +35,7 @@ const Sidebar = () => {
             message: "Haha oh man, this is amazing!",
             time: "6h 21m",
             platform: "whatsapp",
-            online:false,
+            online: false,
             isSend: true,
             isRead: true
         },
@@ -44,7 +47,7 @@ const Sidebar = () => {
             time: "6h 21m",
             platform: "instagram",
             isSend: false,
-            online:false,
+            online: false,
             isRead: false
         }
     ];
@@ -74,7 +77,7 @@ const Sidebar = () => {
 
             {/* Tabs */}
             <div className="flex w-full p-1 bg-gray-100 tracking-wide  items-center rounded-lg space-x-2 mb-4">
-                <button className="px-4 py-1.5 w-[50%] shadow-3xl border rounded-lg text-md font-bold">
+                <button className="px-4 py-1.5 w-[50%] shadow-3xl bg-white border rounded-lg text-md font-bold">
                     Messages
                 </button>
                 <button className="px-4 py-1.5 w-[50%] text-gray-400 text-md ">
@@ -104,11 +107,14 @@ const Sidebar = () => {
                         <div className="flex items-start space-x-3 ">
                             {message.avatar ? (
                                 message.avatar.startsWith('/api') ? (
-                                  <div className='bg-[#bae6fd] p-1 rounded-full'>  <img
-                                        src='profile.png'
-                                        alt={message.user}
-                                        className="w-8 h-8  rounded-full"
-                                    />
+                                    <div className='bg-[#bae6fd] p-1 rounded-full'>
+                                        <Image
+                                            src="/profile.png"     // Replace with your image path
+                                            alt={message.user}     // Dynamic alt text based on message.user
+                                            width={32}             // Convert "w-8" to pixel value (8 * 4 = 32px)
+                                            height={32}            // Convert "h-8" to pixel value (8 * 4 = 32px)
+                                            className="rounded-full"
+                                        />
                                     </div>
                                 ) : (
                                     <div className="w-8 h-8 flex bg-yellow-200 rounded-full  items-center justify-center text-xl">
@@ -126,38 +132,43 @@ const Sidebar = () => {
                                         <span className="font-medium text-md">{message.user}</span>
                                         {message.platform === 'messenger' &&
                                             <img
-                                                src='messager.png'
+                                                src={message.user === 'admin' ? 'admin.png' : 'user.png'}
                                                 alt={message.user}
-                                                className="w-5  rounded-full"
+                                                className="w-5 h-5 rounded-full"
                                             />
+
                                         }
                                         {message.platform === 'message' &&
                                             <MessageCircleCodeIcon className='w-5 text-blue'></MessageCircleCodeIcon>
                                         }
                                         {message.platform === 'whatsapp' &&
-                                            <img
-                                                src='whatsapp.png'
-                                                alt={message.user}
-                                                className="w-6  rounded-full"
+                                            <Image
+                                                src="/whatsapp.png"     // Path to the WhatsApp icon
+                                                alt={message.user}      // Dynamic alt text based on message.user
+                                                width={24}              // Convert "w-6" to pixel value (6 * 4 = 24px)
+                                                height={24}             // Convert "h-6" to pixel value (6 * 4 = 24px)
+                                                className="rounded-full"
                                             />}
                                         {message.platform === 'instagram' &&
-                                            <img
-                                                src='insta.png'
-                                                alt={message.user}
-                                                className="w-6 rounded-full"
+                                            <Image
+                                                src="/insta.png"       // Replace with your image path
+                                                alt={message.user}     // Dynamic alt text based on message.user
+                                                width={24}             // Convert "w-6" to pixel value (6 * 4 = 24px)
+                                                height={24}            // Ensure height matches width for a square shape
+                                                className="rounded-full"
                                             />}
                                     </div >
                                     <div
-  className={`text-s ${message.online ? 'text-blue-600' : 'text-black'} flex flex-col`}
->
-  {message.online ? (
-    <div className="inline-flex items-center text-sm">
-     <FaCircle className='mr-2 w-2' /> {message.time}
-    </div>
-  ) : (
-    <span className='text-sm'>{message.time}</span>
-  )}
-</div>
+                                        className={`text-s ${message.online ? 'text-blue-600' : 'text-black'} flex flex-col`}
+                                    >
+                                        {message.online ? (
+                                            <div className="inline-flex items-center text-sm">
+                                                 {message.time}
+                                            </div>
+                                        ) : (
+                                            <span className='text-sm'>{message.time}</span>
+                                        )}
+                                    </div>
 
 
                                 </div>
@@ -188,5 +199,6 @@ const Sidebar = () => {
 
     );
 };
+/******  f983bb5d-0905-46f6-a3af-e26f33b8b1ab  *******/
 
 export default Sidebar;
