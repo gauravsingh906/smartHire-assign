@@ -77,15 +77,15 @@ const ChatFull = () => {
             </p>
           </div>
           
-  <div class="absolute inset-0 z-0">
+  <div className="absolute inset-0 z-0">
    
-    <div class="absolute w-2 h-2 bg-gradient-to-tr from-purple-400 to-blue-500 rounded-full top-3 right-10"></div>
-    <div class="absolute w-3 h-3 bg-gradient-to-tr from-pink-400 to-yellow-400 rounded-full top-2 right-14"></div>
-    <div class="absolute w-4 h-4 bg-gradient-to-tr from-blue-400 to-green-400 rounded-full top-5 right-6"></div>
-    <div class="absolute w-5 h-5 bg-gradient-to-tr from-red-400 to-purple-500 rounded-full top-6 right-8"></div>
-    <div class="absolute w-3 h-3 bg-gradient-to-tr from-yellow-400 to-orange-400 rounded-full top-9 right-2"></div>
-    <div class="absolute w-4 h-4 bg-gradient-to-tr from-yellow-400 to-indigo-400 rounded top-4 right-16"></div>
-    <div class="absolute w-6 h-3 bg-gradient-to-tr from-red-400 to-green-400 rounded-[.5rem] top-10 right-16"></div>
+    <div className="absolute w-2 h-2 bg-gradient-to-tr from-purple-400 to-blue-500 rounded-full top-3 right-10"></div>
+    <div className="absolute w-3 h-3 bg-gradient-to-tr from-pink-400 to-yellow-400 rounded-full top-2 right-14"></div>
+    <div className="absolute w-4 h-4 bg-gradient-to-tr from-blue-400 to-green-400 rounded-full top-5 right-6"></div>
+    <div className="absolute w-5 h-5 bg-gradient-to-tr from-red-400 to-purple-500 rounded-full top-6 right-8"></div>
+    <div className="absolute w-3 h-3 bg-gradient-to-tr from-yellow-400 to-orange-400 rounded-full top-9 right-2"></div>
+    <div className="absolute w-4 h-4 bg-gradient-to-tr from-yellow-400 to-indigo-400 rounded top-4 right-16"></div>
+    <div className="absolute w-6 h-3 bg-gradient-to-tr from-red-400 to-green-400 rounded-[.5rem] top-10 right-16"></div>
   </div>
          
         </div>
