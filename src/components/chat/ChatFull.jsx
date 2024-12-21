@@ -6,15 +6,15 @@ const ChatFull = () => {
     <div className="w-[52%] mb-2 justify-evenly p-2 bg-white  ">
       {/* Header */}
       <div className="p-2 flex h-[8%] items-center justify-between ">
-        <div className="flex items-center gap-3">
+        <div className="flex w-11 p-2  bg-[#bfdbfe] h-12 rounded-full  items-center gap-3">
           <img 
             src="/profile.png"
             alt="Profile" 
-            className="w-10 h-10 rounded-full"
+            className="w-8 rounded-full"
           />
           <div>
-            <h2 className="font-semibold">Oğuz Yağız Kara</h2>
-            <p className="text-sm text-gray-500">oguz@bluereceipt.com</p>
+            <h2 className="font-semibold text-md">Oğuz Yağız Kara</h2>
+            <p className="text-sm text-gray-500 text-sm">oguz@bluereceipt.com</p>
           </div>
         </div>
      
@@ -24,20 +24,20 @@ const ChatFull = () => {
             className="w-6 h-6"
             alt="Messenger"
           />
-          <span className=" font-bold">Messenger</span>
+          <span className=" font-semibold text-md">Messenger</span>
           <ChevronDown className="w-4 h-4 ml-2 text-gray-600" />
         </div>
        
         <div className="flex gap-5">
 
           <div className="flex items-center ">
-            <img src="tick.png" alt="Messenger" className="w-4 h-4" />
+            <img src="tick.png" alt="Messenger" className="w-3 h-3" />
           
           </div>
           <button>
          <EllipsisVertical  className="w-5 h-5 text-gray-600" />
           </button>
-          <div className="flex items-center justify-center p-2 rounded-full bg-[#00c5f0] ">
+          <div className="flex items-center justify-center p-2 rounded-full bg-[#bfdbfe] ">
             <img src="profile.png" alt="Messenger" className="w-6 h-6" />
             
           </div>
@@ -54,17 +54,17 @@ const ChatFull = () => {
 
       {/* Chat Area */}
       <div
-  className="mb-8 p-2  h-[80%] w-full justify-center bg-gray-50 space-y-4"
+  className="mb-4 p-2  h-[80%] w-full justify-center bg-gray-50 space-y-4"
   style={{ backgroundImage: "url('/bg.jpg')"}}
 >
      {/* System Message */}
-        <div className="flex w-full  flex-col ">
-          <div className="bg-white rounded-lg p-3 shadow-sm ">
+        <div className="flex relative w-full  flex-col ">
+          <div className="bg-white rounded-lg  p-3 shadow-sm ">
             <div className="flex items-center  gap-2 mb-2">
-             <div className='p-2 bg-[#00d1fc] rounded-full'> <img 
+             <div className='p-2 bg-[#bfdbfe] rounded-full'> <img 
                 src="profile.png"
                 alt="Profile" 
-                className="w-8 h-8 rounded-full"
+                className="w-7 h-7 rounded-full"
               />
               </div>
               <div>
@@ -73,15 +73,26 @@ const ChatFull = () => {
               </div>
             </div>
             <p className="text-md p-1">
-              This is the very beginning of your direct message history with <span className="text-blue-600 bg-blue-200 p-1 rounded-full">@Oğuz Yağız Kara</span>
+              This is the very beginning of your direct message history with <span className="text-[#2dd4bf] bg-[#ccfbf1] p-1 rounded-full">@Oğuz Yağız Kara</span>
             </p>
           </div>
+          
+  <div class="absolute inset-0 z-0">
+   
+    <div class="absolute w-2 h-2 bg-gradient-to-tr from-purple-400 to-blue-500 rounded-full top-3 right-10"></div>
+    <div class="absolute w-3 h-3 bg-gradient-to-tr from-pink-400 to-yellow-400 rounded-full top-2 right-14"></div>
+    <div class="absolute w-4 h-4 bg-gradient-to-tr from-blue-400 to-green-400 rounded-full top-5 right-6"></div>
+    <div class="absolute w-5 h-5 bg-gradient-to-tr from-red-400 to-purple-500 rounded-full top-6 right-8"></div>
+    <div class="absolute w-3 h-3 bg-gradient-to-tr from-yellow-400 to-orange-400 rounded-full top-9 right-2"></div>
+    <div class="absolute w-4 h-4 bg-gradient-to-tr from-yellow-400 to-indigo-400 rounded top-4 right-16"></div>
+    <div class="absolute w-6 h-3 bg-gradient-to-tr from-red-400 to-green-400 rounded-[.5rem] top-10 right-16"></div>
+  </div>
          
         </div>
-        <div className="text-md  flex justify-center "><span className='px-3 py-1 bg-white self-center rounded font-bold'>Today</span></div>
+        <div className="text-md  flex justify-center "><span className='px-3 py-1 bg-white self-center rounded font-semibold'>Today</span></div>
         {/* User Message */}
         <div className="flex  items-start p-2 gap-2">
-        <div className='p-2 bg-[#00d1fc] rounded-full'> <img 
+        <div className='p-2 bg-[#bfdbfe] rounded-full'> <img 
                 src="profile.png"
                 alt="Profile" 
                 className="w-6 h-6 rounded-full"
@@ -93,7 +104,7 @@ const ChatFull = () => {
               className='flex justify-between'><p className="text-md mb-4">
                 I keep getting "error while creating a new pop up" for the first time setup, so I'm not able to create a pop up. My shop name is PinkSweetHeart
               </p>
-              <div className=' w-18 h-18 p-1  rounded-full'> <img 
+              <div className=' w-18 h-18 p-1   rounded-full'> <img 
                 src="messager.png" 
                 alt="Profile" 
                 className="w-14  "
@@ -131,20 +142,20 @@ const ChatFull = () => {
             <div className="flex justify-end text-xs text-gray-500">12:52PM</div>
           </div>
         
-          <div className='p-1 bg-gray-200 rounded-full  justify-center ml-1 items-center w-8 h-8'> 
+          <div className='p-3 bg-white rounded-full w-11 h-11 justify-center ml-1 items-center'> 
             <Sparkles className='w-5 h-5'></Sparkles>
               </div>
         </div>
 
         {/* Purchase Notification */}
-        <div className="flex  w-[96%] m-auto items-center gap-2 bg-gray-100 rounded-lg p-2">
+        <div className="flex  w-[96%] m-auto items-center gap-2 bg-white rounded-lg p-2">
           <div className="w-6 h-6  rounded-full flex items-center justify-center text-white">
           <ShoppingCart className="text-[#272dce] w-5 h-5" />
           </div>
           <div className="flex-1 text-sm">
-            <span className="text-blue-600 bg-blue-200 p-1 m-1 rounded-full">@Ekrem Kenter</span>
+            <span className="text-[#2dd4bf] bg-[#ccfbf1]  p-1 m-1 rounded-full">@Ekrem Kenter</span>
             <span className=" font-medium">Product purchased!</span>
-            <span className=" bg-black text-white p-1 m-1 rounded-full">$99</span>
+            <span className=" bg-black text-white p-1 m-1 rounded-lg">$99</span>
             <span className="font-medium">SNOW® TEETH WHITENING KIT</span>
           </div>
           <span className="text-sm text-gray-500">2m ago</span>
@@ -152,7 +163,7 @@ const ChatFull = () => {
       </div>
 
       {/* Input Area */}
-      <div className=" border  h-[10%] p-1 rounded-lg gap-5">
+      <div className=" border  h-[11%] p-1 rounded-lg gap-5">
       <div className='mb-[1.5]'>
         <input
           type="text"

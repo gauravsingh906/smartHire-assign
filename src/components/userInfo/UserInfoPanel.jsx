@@ -34,9 +34,9 @@ const UserInfoPanel = () => {
       {/* Profile Header */}
       <div className="text-center mb-6">
         <div className="relative inline-block">
-          <div className="w-20 p-2 h-20 bg-blue-50 rounded-full mb-2">
+          <div className="w-20 p-2 h-20 bg-[#bae6fd] rounded-full mb-2">
             <img
-              src="/profile.jpeg"
+              src="/profile.png"
               alt="Profile"
               className="rounded-full"
             />
@@ -69,7 +69,7 @@ const UserInfoPanel = () => {
       <div className="bg-gray-50 rounded-lg p-1 mb-6">
         <div className="grid grid-cols-2 gap-4">
           <div className="border-2 rounded-lg p-2">
-            <div className="flex items-center text-lg text-gray-600 mb-1">
+            <div className="flex items-center text-md text-gray-600 mb-1">
               <RiMoneyDollarCircleFill className="w-4 h-4 mr-1" />
               Revenue
             </div>
@@ -77,7 +77,7 @@ const UserInfoPanel = () => {
             <div className="text-sm text-gray-500">3 Orders</div>
           </div>
           <div className="border-2 rounded-lg p-2">
-            <div className="flex items-center text-lg text-gray-600 mb-1">
+            <div className="flex items-center text-md text-gray-600 mb-1">
               <Eye className="w-4 h-4 mr-1" />
               Web Visits
             </div>
@@ -88,7 +88,7 @@ const UserInfoPanel = () => {
       </div>
 
       {/* Action Icons */}
-      <div className="grid grid-cols-3 rounded-lg p-1 bg-gray-300 mb-4 gap-1">
+      <div className="grid grid-cols-3 rounded-lg p-1 bg-gray-100 mb-4 gap-1">
         <button className="p-2 bg-white hover:bg-gray-50 rounded-lg">
           <User className="w-5 text-gray-900 mx-auto" />
         </button>
@@ -124,7 +124,7 @@ const UserInfoPanel = () => {
             )}
             <span className="font-semibold text-lg">Information</span>
           </div>
-          <button className="text-blue-600 text-lg flex items-center">
+          <button className="text-blue-600 text-md flex items-center">
             <Plus className="w-4 h-4 mr-1" />
             Add
           </button>
@@ -204,7 +204,7 @@ const UserInfoPanel = () => {
             )}
             <span className="font-semibold text-lg">Tags</span>
           </div>
-          <button className="text-blue-600 text-lg flex items-center">
+          <button className="text-blue-600 text-md flex items-center">
             <Plus className="w-4 h-4 mr-1" />
             Add
           </button>

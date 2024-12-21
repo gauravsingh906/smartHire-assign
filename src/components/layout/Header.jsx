@@ -4,7 +4,7 @@ import { BsTerminalSplit } from "react-icons/bs";
 
 const Header = () => {
   return (
-    <div className="w-full h-8 bg-white  flex items-center justify-between px-4">
+    <div className="w-full bg-white  flex items-center justify-between px-4">
       {/* Left Navigation Controls */}
       <div className="flex items-center gap-5">
         <div className="flex items-center ">

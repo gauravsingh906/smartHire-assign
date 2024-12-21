@@ -101,21 +101,22 @@ const Sidebar = () => {
             <div className="space-y-1">
                 {messages.map((message) => (
                     <div key={message.id} className="p-3 border-b-2 hover:bg-gray-50 rounded-lg cursor-pointer">
-                        <div className="flex items-start space-x-3">
+                        <div className="flex items-start space-x-3 ">
                             {message.avatar ? (
                                 message.avatar.startsWith('/api') ? (
-                                    <img
-                                        src='profile.jpeg'
+                                  <div className='bg-[#bae6fd] p-1 rounded-full'>  <img
+                                        src='profile.png'
                                         alt={message.user}
-                                        className="w-8 h-8 rounded-full"
+                                        className="w-8 h-8  rounded-full"
                                     />
+                                    </div>
                                 ) : (
-                                    <div className="w-8 h-8 flex items-center justify-center text-xl">
+                                    <div className="w-8 h-8 flex bg-yellow-200 rounded-full  items-center justify-center text-xl">
                                         {message.avatar}
                                     </div>
                                 )
                             ) : (
-                                <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-sm">
+                                <div className="w-8 h-8 bg-[#bae6fd]  text-blue-600 rounded-full flex items-center justify-center text-sm">
                                     {message.initials}
                                 </div>
                             )}
