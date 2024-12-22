@@ -158,8 +158,8 @@ const Sidebar = () => {
                                             <Image
                                                 src="/messager.png"     // Path to the WhatsApp icon
                                                 alt={message.user}      // Dynamic alt text based on message.user
-                                                width={32}              // Convert "w-6" to pixel value (6 * 4 = 24px)
-                                                height={32}             // Convert "h-6" to pixel value (6 * 4 = 24px)
+                                                width={24}              // Convert "w-6" to pixel value (6 * 4 = 24px)
+                                                height={24}             // Convert "h-6" to pixel value (6 * 4 = 24px)
                                                 className="rounded-full"
                                             />
 
@@ -171,8 +171,8 @@ const Sidebar = () => {
                                             <Image
                                                 src="/whatsapp.png"     // Path to the WhatsApp icon
                                                 alt={message.user}      // Dynamic alt text based on message.user
-                                                width={32}              // Convert "w-6" to pixel value (6 * 4 = 24px)
-                                                height={32}             // Convert "h-6" to pixel value (6 * 4 = 24px)
+                                                width={29}              // Convert "w-6" to pixel value (6 * 4 = 24px)
+                                                height={29}             // Convert "h-6" to pixel value (6 * 4 = 24px)
                                                 className="rounded-full"
                                             />}
                                         {message.platform === 'instagram' &&
