@@ -99,17 +99,33 @@ const UserInfoPanel = () => {
                 </div>
             </div>
             {/* Action Icons */}
-            <div className="grid grid-cols-3 rounded-lg p-1 bg-gray-100 mb-4 gap-1">
-                <button className="p-2 bg-white hover:bg-gray-50 rounded-lg">
-                    <User className="w-5 text-gray-900 mx-auto" />
-                </button>
-                <button className="p-2 hover:bg-gray-50 rounded-lg">
-                    <Mail className="w-5 text-gray-900 mx-auto" />
-                </button>
-                <button className="p-2 hover:bg-gray-50 rounded-lg">
-                    <Clock className="w-5 text-gray-900 mx-auto" />
-                </button>
-            </div>
+            <div className="grid grid-cols-3 p-1 pb-0 rounded-lg  bg-gray-100 mb-4 gap-1 shadow-sm hover:shadow-md transition-shadow duration-300">
+  {/* User Button */}
+  <button
+    className="p-1  bg-white hover:bg-gray-50 
+    active:bg-gray-200 rounded-sm flex shadow-lg items-center justify-center group transition-all duration-200"
+    title="User Information"
+  >
+    <User className="w-5 h-5 text-gray-900 group-hover:text-blue-600 group-active:scale-90 transition-transform" />
+  </button>
+  
+  {/* Mail Button */}
+  <button
+    className="p-1  hover:bg-gray-50 active:bg-gray-200 rounded-lg flex items-center justify-center group transition-all duration-200"
+    title="Email Notifications"
+  >
+    <Mail className="w-5 h-5 text-gray-900 group-hover:text-blue-600 group-active:scale-90 transition-transform" />
+  </button>
+  
+  {/* Clock Button */}
+  <button
+    className="p-1 hover:bg-gray-50 active:bg-gray-200 rounded-lg flex items-center justify-center group transition-all duration-200"
+    title="Schedule"
+  >
+    <Clock className="w-5 h-5 text-gray-900 group-hover:text-blue-600 group-active:scale-90 transition-transform" />
+  </button>
+</div>
+
 
             {/* Search */}
             <div className="relative bg-gray-300 rounded-lg mb-4">
