@@ -133,10 +133,10 @@ const Sidebar = () => {
                                 message.avatar.startsWith('/api') ? (
                                     <div className='bg-[#bae6fd] p-1 rounded-full'>
                                         <Image
-                                            src="/profile.png"     // Replace with your image path
-                                            alt={message.user}     // Dynamic alt text based on message.user
-                                            width={32}             // Convert "w-8" to pixel value (8 * 4 = 32px)
-                                            height={32}            // Convert "h-8" to pixel value (8 * 4 = 32px)
+                                            src="/profile.png"    
+                                            alt={message.user}     
+                                            width={32}            
+                                            height={32}            
                                             className="rounded-full"
                                         />
                                     </div>
@@ -156,10 +156,10 @@ const Sidebar = () => {
                                         <span className="font-medium text-md">{message.user}</span>
                                         {message.platform === 'messenger' &&
                                             <Image
-                                                src="/messager.png"     // Path to the WhatsApp icon
-                                                alt={message.user}      // Dynamic alt text based on message.user
-                                                width={24}              // Convert "w-6" to pixel value (6 * 4 = 24px)
-                                                height={24}             // Convert "h-6" to pixel value (6 * 4 = 24px)
+                                                src="/messager.png"    
+                                                alt={message.user}      
+                                                width={24}              
+                                                height={24}             
                                                 className="rounded-full"
                                             />
 
@@ -169,18 +169,18 @@ const Sidebar = () => {
                                         }
                                         {message.platform === 'whatsapp' &&
                                             <Image
-                                                src="/whatsapp.png"     // Path to the WhatsApp icon
-                                                alt={message.user}      // Dynamic alt text based on message.user
-                                                width={29}              // Convert "w-6" to pixel value (6 * 4 = 24px)
-                                                height={29}             // Convert "h-6" to pixel value (6 * 4 = 24px)
+                                                src="/whatsapp.png"     
+                                                alt={message.user}      
+                                                width={29}             
+                                                height={29}             
                                                 className="rounded-full"
                                             />}
                                         {message.platform === 'instagram' &&
                                             <Image
-                                                src="/insta.png"       // Replace with your image path
-                                                alt={message.user}     // Dynamic alt text based on message.user
-                                                width={24}             // Convert "w-6" to pixel value (6 * 4 = 24px)
-                                                height={24}            // Ensure height matches width for a square shape
+                                                src="/insta.png"       
+                                                alt={message.user}   
+                                                width={24}          
+                                                height={24}           
                                                 className="rounded-full"
                                             />}
                                     </div >
