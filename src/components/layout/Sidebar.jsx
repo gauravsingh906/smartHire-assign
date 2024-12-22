@@ -1,16 +1,20 @@
+"use client";
 
-import React from 'react';
-import { ChevronLeft, Search, Plus, Users, Filter, MessageCircleCodeIcon, ArrowLeft, ChevronDown, Dot, Disc, Disc2 } from 'lucide-react';
+import React, { useState } from 'react';
+import { ChevronLeft, Search, Plus, Users, Filter, MessageCircleCodeIcon, ArrowLeft, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
-
 const Sidebar = () => {
+    const [activeTab, setActiveTab] = useState('messages');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [selectedMessageId, setSelectedMessageId] = useState(null);
+
     const messages = [
         {
             id: 1,
             user: "Oğuz Yağız Kara",
             avatar: "/api/placeholder/32/32",
-            message: "I keep getting \"error while creating a new pop up\" for the first time setu...",
+            message: "I keep getting \"error while creating a new pop up\"...",
             time: "5m",
             platform: "message",
             online: true,
@@ -21,10 +25,10 @@ const Sidebar = () => {
             id: 2,
             user: "George Klein",
             avatar: "/api/placeholder/32/32",
-            message: "Wow, this is really epic man! Thank...",
+            message: "Wow, this is really epic man! Thanks...",
             time: "1h 54m",
-            online: false,
             platform: "messenger",
+            online: false,
             isSend: true,
             isRead: false
         },
@@ -38,8 +42,7 @@ const Sidebar = () => {
             online: false,
             isSend: true,
             isRead: true
-        },
-        {
+        }, {
             id: 4,
             user: "Erşad Başbağ",
             initials: "EB",
@@ -52,13 +55,18 @@ const Sidebar = () => {
         }
     ];
 
-    return (
-        <div className="w-[24%] bg-white min-h-screen p-2  flex flex-col border-gray-200">
-            {/* Header */}
+    // Filtered messages based on search input
+    const filteredMessages = messages.filter((msg) =>
+        msg.user.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        msg.message.toLowerCase().includes(searchQuery.toLowerCase())
+    );
 
+    return (
+        <div className="w-[24%] bg-white min-h-screen p-2 flex flex-col border-gray-200">
+            {/* Header */}
             <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-3">
-                    <ArrowLeft className="w-5 h-5 text-gray-600" />
+                    <ArrowLeft className="w-5 h-5 text-gray-600 cursor-pointer hover:text-blue-600" />
                     <div className="flex items-center space-x-2">
                         <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
                             <span className="text-white text-lg">●</span>
@@ -70,21 +78,37 @@ const Sidebar = () => {
                     </div>
                 </div>
                 <div className="flex items-center space-x-3 gap-2">
-                    <div className='rounded-lg'>     <Search className="w-5 text-bold text-gray-900" /></div>
-                    <div className='rounded-lg border-2 p-2'><Plus className="w-4 h-4 text-bold text-gray-900" /></div>
+                    <Search className="w-5 text-gray-900 cursor-pointer hover:text-blue-600" />
+                    <div className='rounded-lg border-2 p-2 cursor-pointer hover:bg-gray-100'>
+                        <Plus className="w-4 h-4 text-gray-900" />
+                    </div>
                 </div>
             </div>
 
             {/* Tabs */}
-            <div className="flex w-full p-1 bg-gray-100 tracking-wide  items-center rounded-lg space-x-2 mb-4">
-                <button className="px-4 py-1.5 w-[50%] shadow-3xl bg-white border rounded-lg text-md font-bold">
+            <div className="flex w-full p-1 bg-gray-100 rounded-lg space-x-2 mb-4">
+                <button
+                    onClick={() => setActiveTab('messages')}
+                    className={`px-4 py-1.5 w-[50%] border rounded-lg text-md font-bold ${activeTab === 'messages' ? 'bg-blue-500 text-white' : 'bg-white'}`}
+                >
                     Messages
                 </button>
-                <button className="px-4 py-1.5 w-[50%] text-gray-400 text-md ">
+                <button
+                    onClick={() => setActiveTab('segments')}
+                    className={`px-4 py-1.5 w-[50%] border rounded-lg text-md ${activeTab === 'segments' ? 'bg-blue-500 text-white' : 'bg-white'}`}
+                >
                     Segments
                 </button>
             </div>
 
+            {/* Search Bar */}
+            <input
+                type="text"
+                placeholder="Search messages..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full p-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
             {/* Filters */}
             <div className="flex items-center justify-between  mb-4">
                 <div className="flex items-center gap-2">
@@ -132,12 +156,12 @@ const Sidebar = () => {
                                         <span className="font-medium text-md">{message.user}</span>
                                         {message.platform === 'messenger' &&
                                             <Image
-                                            src="/messager.png"     // Path to the WhatsApp icon
-                                            alt={message.user}      // Dynamic alt text based on message.user
-                                            width={32}              // Convert "w-6" to pixel value (6 * 4 = 24px)
-                                            height={32}             // Convert "h-6" to pixel value (6 * 4 = 24px)
-                                            className="rounded-full"
-                                        />
+                                                src="/messager.png"     // Path to the WhatsApp icon
+                                                alt={message.user}      // Dynamic alt text based on message.user
+                                                width={32}              // Convert "w-6" to pixel value (6 * 4 = 24px)
+                                                height={32}             // Convert "h-6" to pixel value (6 * 4 = 24px)
+                                                className="rounded-full"
+                                            />
 
                                         }
                                         {message.platform === 'message' &&
@@ -165,7 +189,7 @@ const Sidebar = () => {
                                     >
                                         {message.online ? (
                                             <div className="inline-flex items-center text-sm">
-                                                 {message.time}
+                                                {message.time}
                                             </div>
                                         ) : (
                                             <span className='text-sm'>{message.time}</span>
